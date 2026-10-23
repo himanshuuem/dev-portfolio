@@ -1,0 +1,84 @@
+:root {
+  --accent: #64ffda;
+  --accent-ink: #062a24;
+  --bs-font-sans-serif: "Sora", system-ui, sans-serif;
+}
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0a1020;
+  --bs-tertiary-bg: #0e1629;
+  --bs-body-color: #d6deeb;
+  --card-bg: #111b31;
+  --card-border: #1d2a47;
+}
+[data-bs-theme="light"] {
+  --accent: #0f9d7a;
+  --accent-ink: #ffffff;
+  --bs-body-bg: #fbfcfd;
+  --bs-tertiary-bg: #f1f4f8;
+  --card-bg: #ffffff;
+  --card-border: #e2e7ef;
+}
+
+html { scroll-padding-top: 72px; }
+body { font-family: var(--bs-font-sans-serif); }
+.mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+.accent { color: var(--accent); }
+.py-6 { padding-block: 6rem; }
+
+.glass {
+  background: color-mix(in srgb, var(--bs-body-bg) 75%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--card-border);
+}
+.navbar .nav-link.active { color: var(--accent) !important; }
+.theme-btn { width: 34px; height: 34px; padding: 0; }
+
+.btn-accent {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-color: var(--accent-ink);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--accent) 85%, white);
+  --bs-btn-hover-border-color: var(--accent);
+  --bs-btn-hover-color: var(--accent-ink);
+  --bs-btn-active-bg: var(--accent);
+  --bs-btn-active-color: var(--accent-ink);
+  font-weight: 600;
+}
+[data-bs-theme="light"] .btn-outline-light { --bs-btn-color: #0a1020; --bs-btn-border-color: #0a1020; --bs-btn-hover-bg: #0a1020; --bs-btn-hover-color: #fff; }
+.link-accent { color: var(--accent); }
+
+.hero { position: relative; min-height: 100vh; padding-top: 72px; overflow: hidden; }
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--accent) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--accent) 8%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%);
+}
+.rotator { display: inline-block; color: var(--bs-body-color); font-weight: 400; transition: opacity .3s, transform .3s; }
+.rotator.out { opacity: 0; transform: translateY(8px); }
+
+.fade-up { animation: fadeUp .7s both; }
+.fade-up:nth-child(2) { animation-delay: .1s; }
+.fade-up:nth-child(3) { animation-delay: .2s; }
+.fade-up:nth-child(4) { animation-delay: .3s; }
+.fade-up:nth-child(5) { animation-delay: .4s; }
+
+.section-title { display: flex; align-items: baseline; gap: .6rem; margin-bottom: 2rem; font-weight: 800; }
+.section-title::after { content: ""; flex: 1; max-width: 240px; height: 1px; background: var(--card-border); align-self: center; }
+
+.skill-card, .feature-card, .build-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: transform .25s, border-color .25s;
+}
+.feature-card:hover, .build-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.skill-badge { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--bs-body-color); font-weight: 500; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

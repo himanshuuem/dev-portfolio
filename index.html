@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Himanshu — ML Engineer · Security-ML · AI Agents</title>
+  <meta name="description" content="Portfolio of Himanshu: machine learning for security, AI agents, and full-stack web projects.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { const t = localStorage.getItem("portfolio-theme"); if (t) document.documentElement.dataset.bsTheme = t; } catch {}
+  </script>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+  <nav id="navbar" class="navbar navbar-expand-md fixed-top glass">
+    <div class="container">
+      <a class="navbar-brand mono" href="#home">himanshu<span class="accent">.dev</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto align-items-md-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#builds">Builds</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-md-2">
+            <button class="btn btn-sm btn-outline-secondary rounded-circle theme-btn" id="themeToggle" type="button" aria-label="Toggle colour theme">◐</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero d-flex align-items-center">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="container position-relative">
+      <p class="mono accent mb-3 fade-up">Hi, my name is</p>
+      <h1 class="display-2 fw-bolder mb-3 fade-up">Himanshu.</h1>
+      <h2 class="display-6 text-body-secondary fw-light mb-4 fade-up">I build <span class="rotator" aria-live="polite">ML that defends networks</span>.</h2>
+      <p class="lead col-lg-7 text-body-secondary mb-4 fade-up">
+        I'm an ML engineer with an MTech from IIEST Shibpur. My work sits where machine learning, security and AI agents meet, and I also build full-stack web apps.
+      </p>
+      <div class="d-flex flex-wrap gap-2 fade-up">
+        <a class="btn btn-accent btn-lg rounded-pill px-4" href="#work">See my work</a>
+        <a class="btn btn-outline-light btn-lg rounded-pill px-4" href="https://github.com/himanshuuem">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="py-6">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <h2 class="section-title"><span class="mono accent">01.</span> About</h2>
+            <p>I like problems where the data is messy and the stakes are real. My MTech thesis detects Sybil, DDoS/botnet and bad-mouthing attacks in Social IoT networks with a dual-layer ML pipeline.</p>
+            <p>As a teaching assistant for the Java OOP lab, I built a tool that grades hundreds of submissions while keeping a human in charge of every final grade.</p>
+            <p class="mb-0">I'm currently looking for <strong>ML Engineer</strong>, <strong>Security-ML</strong> and <strong>AI-agent</strong> roles.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="row g-3" id="skills"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="py-6 bg-body-tertiary">
+      <div class="container">
+        <h2 class="section-title"><span class="mono accent">02.</span> Featured work</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="feature-card h-100 p-4 rounded-4">
+              <p class="mono small accent mb-2">Python · Docker · MCP · OCR</p>
+              <h3 class="h3 fw-bold">Lab Grader</h3>
+              <p class="text-body-secondary">An end-to-end autograder for C, C++, Python and Java labs. It pulls submissions from Google Classroom through an MCP server, repairs code that Word or Google Docs mangled, reads output screenshots with OCR, runs every program in an isolated Docker sandbox against hidden tests, and flags copied code even when variables are renamed.</p>
+              <ul class="small text-body-secondary mb-0">
+                <li>One-click grading for a whole class</li>
+                <li>Checks pasted outputs against what the code really prints</li>
+                <li>Human-in-the-loop: nothing is published without TA approval</li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="feature-card h-100 p-4 rounded-4">
+              <p class="mono small accent mb-2">Python · Machine Learning · IoT Security</p>
+              <h3 class="h3 fw-bold">SIoT Security ML</h3>
+              <p class="text-body-secondary">My MTech thesis: dual-layer machine-learning detection of Sybil, DDoS/botnet and bad-mouthing attacks in Social Internet of Things networks.</p>
+              <ul class="small text-body-secondary mb-0">
+                <li>Detects network-level and trust-level attacks</li>
+                <li>Compares models on attack-specific features</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="builds" class="py-6">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <h2 class="section-title mb-0"><span class="mono accent">03.</span> Web builds</h2>
+          <div class="btn-group flex-wrap" role="group" aria-label="Filter builds" id="buildFilters"></div>
+        </div>
+        <p class="text-body-secondary col-lg-8">Full-stack projects I designed and built from scratch while working through a web development bootcamp: front-end, Node/Express, APIs, PostgreSQL, auth and React.</p>
+        <div class="row g-3" id="buildGrid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-6 bg-body-tertiary">
+      <div class="container text-center">
+        <h2 class="section-title justify-content-center"><span class="mono accent">04.</span> Get in touch</h2>
+        <p class="lead col-lg-6 mx-auto text-body-secondary">I'm open to new roles and collaborations. The quickest way to reach me is LinkedIn.</p>
+        <div class="d-flex justify-content-center flex-wrap gap-2 mt-4">
+          <a class="btn btn-accent btn-lg rounded-pill px-4" href="https://www.linkedin.com/in/himanshuuem">Message me on LinkedIn</a>
+          <a class="btn btn-outline-secondary btn-lg rounded-pill px-4" href="https://github.com/himanshuuem">Browse my GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center small text-body-secondary mono">
+    Designed &amp; built by Himanshu · Bootstrap 5 + vanilla JS
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
